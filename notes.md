@@ -27,6 +27,7 @@ serial number
 description
 creation date
 comments w/ timestamps
+delete comments as needed (employee privileges?)
 
 
 
@@ -41,6 +42,8 @@ don't handle customer products and let them report everything in the ticket?
 
 Employees can see list of tickets (opened/closed)
 Employees click on ticket and information populates targeted area
+Employee will need search functionality for open tickets (can come later)
+
 
 
 Pages needed
