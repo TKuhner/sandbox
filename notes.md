@@ -1,6 +1,6 @@
 need database
 
-CUSTOMER TABLE
+# CUSTOMER TABLE
 id (auto_increment)
 first name - primary key
 last name - primary key
@@ -17,13 +17,13 @@ verdict - probably not going to have make model sn tied to customer
 
 
 
-COMPANY TABLE
+# COMPANY TABLE
 id (auto_increment) Primary key
 name primary key
 billing address
 
 
-TICKET TABLE
+# TICKET TABLE
 header ()
 customer id Foreign key (Customer_id) references customer(id)
 customer name - Foreign key customer_first_name + " " + customer_last_name references customer_first_name +
@@ -43,19 +43,20 @@ delete comments as needed (employee privileges?)
 
 
 
-Functionality - concepts
-Customer requests repair assistance
+# Functionality - concepts
+Customer registers account, tied to a company (display list of added companies/allow them to create a company if it's not in the database?)
 Customer creates/fills out ticket
-populate equipment from their list of products?
+populate equipment from their list of products? (probably not given cons)
 don't handle customer products and let them report everything in the ticket?
 
 Employees can see list of tickets (opened/closed)
 Employees click on ticket and information populates targeted area
 Employee will need search functionality for open tickets (can come later)
+Allow employee communication with customer via email? 
 
 
 
-Pages needed
+# Pages needed
 Company home page
 Customer account/tickets page
 Employee page to see tickets
