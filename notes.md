@@ -1,30 +1,39 @@
 need database
 
 CUSTOMER TABLE
-id
-first name
-last name
-email address
-shipping address
-company (id)?
+id (auto_increment)
+first name - primary key
+last name - primary key
+email address - string
+shipping address - string
+company (id)? Foreign Key (Company_id) references (company(id))
 equipment make
 equipment model
 serial number
+## should equipment be tied to customer specifically?
+pros - keeps record of customer products 
+cons - if customer leaves company, they don't bring equipment with them
+verdict - probably not going to have make model sn tied to customer
+
 
 
 COMPANY TABLE
-id
-name
+id (auto_increment) Primary key
+name primary key
 billing address
 
 
 TICKET TABLE
 header ()
-Symptom
-equipment make
-equipment model
-serial number
-description
+customer id Foreign key (Customer_id) references customer(id)
+customer name - Foreign key customer_first_name + " " + customer_last_name references customer_first_name +
+company id - foreign key company_id references company(id)
+Company name - foreign key company_name references company(name)
+equipment make - varchar(30)
+equipment model - varchar(30)
+serial number - varchar(30)
+Symptom - varchar(30)
+description string
 creation date
 comments w/ timestamps
 delete comments as needed (employee privileges?)
